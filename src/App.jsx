@@ -7,15 +7,27 @@ export function App() {
 
   return (
     <div>
+      <nav className="nav-container">
+        <div className="logo"></div>
+
+        <div className="nav-tools">
+          <span>Resultado: {resultado}</span>
+
+          <div className="user-avatar">
+            NA
+          </div>
+        </div>
+      </nav>
+
       <MyButton onClick={() => {
-    let index =  (Math.floor(Math.random() * 13))
+        let index =  (Math.floor(Math.random() * 13))
 
-    let option = optionsWheel[index]
-    setResultado(option)
+        let option = optionsWheel[index]
+        setResultado(option)
 
-    setDinheiro(dinheiro + option)
+        setDinheiro(dinheiro + option)
 
-  }} />
+      }} />
       <div>
         Resultado: {resultado}
         <div>
@@ -23,8 +35,6 @@ export function App() {
         </div>
       </div>
     </div>
-
-
   )
 }
 
