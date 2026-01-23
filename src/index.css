@@ -4,3 +4,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.prize-wheel-container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
