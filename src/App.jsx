@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { PrizeWheel } from '@mertercelik/react-prize-wheel';
 import '@mertercelik/react-prize-wheel/style.css';
+import { HorseIcon, ListIcon } from '@phosphor-icons/react';
 
 export function App() {
   const wheelRef = useRef();
@@ -29,7 +30,12 @@ export function App() {
   return (
     <div>
       <nav className="nav-container">
-        <div className="logo"></div>
+
+        <div className="hamb-container">
+          <ListIcon size="2rem" />
+
+          <img src="/logo.png" alt="" />
+        </div>
 
         <div className="nav-tools">
           <span>Dinheiro: {dinheiro}</span>
@@ -78,6 +84,7 @@ export function App() {
           wheelRef.current.spin();
         }}
       />
+
       <div>
         Resultado: {resultado}
         <div>{dinheiro}</div>
